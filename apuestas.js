@@ -31,6 +31,7 @@ btnApostar.addEventListener('click', ()=>{
             if(numeroMaquina >= 0 && numeroMaquina<=500){
                 saldoUsuario.value = parseInt(saldoUsuario.value) + parseInt(saldoApostar.value);
                 //numAleatorio.innerText = numeroMaquina;
+                // comentario
             }
         }
         if(t.value == "t3"){
