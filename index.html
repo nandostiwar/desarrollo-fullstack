@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaApuesta</title>
+    <script src="apuesta.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Contenedor principal de Apuesta -->
+    <div>
+
+        <!-- Título -->
+        <h2>Apuesta</h2>
+        
+        <!-- Selección de tipo de apuesta -->
+        <label for="tipoApuesta">Seleccione tipo de apuesta:</label>
+        <select id="tipoApuesta">
+            <option value="25">25%</option>
+            <option value="50">50%</option>
+            <option value="75">75%</option>
+        </select>
+
+        <!-- Información y mensajes -->
+        <p id="saldo"></p>
+        <p id="texto"></p>
+
+        <!-- Sección de cargar saldo -->
+        <label for="entrada">Cargar saldo:</label>
+        <input type="text" id="entrada">
+        <button type="submit" id="cargar">Cargar</button><br><br>
+
+        <!-- Sección de apuesta -->
+        <label for="valorApuesta">Monto de apuesta:</label>
+        <input type="text" id="valorApuesta">
+        <p id="insuficiente"></p>
+        <button type="submit" id="apostar">Apostar</button>
+
+    </div>
+
+</body>
+
+</html>
