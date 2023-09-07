@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Casa de Apuestas</title>
+    <link rel="stylesheet" type="text/css" href="casa_apuesta.css">
+    <script src="casa_apuesta.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Casa de Apuestas</h1>
+        <label for="saldo">Ingrese su saldo: </label>
+        <input type="number" id="saldo">
+        <button onclick="mostrarModosJuego()">Jugar</button>
+        <div id="modosJuego" style="display:none;">
+            <p>Seleccione un modo de juego:</p>
+            <button onclick="iniciarJuego(1)">Modo 1 (0-250)</button>
+            <button onclick="iniciarJuego(2)">Modo 2 (0-500)</button>
+            <button onclick="iniciarJuego(3)">Modo 3 (0-750)</button>
+        </div>
+        <p id="resultado"></p>
+        <p id="numeroAleatorio"></p>
+    </div>
+</body>
+</html>
