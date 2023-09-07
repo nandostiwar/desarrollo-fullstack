@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appuestas.css">
+    <title>Casa de Apuestas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Casa de Apuestas</h1>
+        <p>Saldo: $<span id="saldo">0</span></p>
+        <button onclick="cargarSaldo()">Cargar Saldo</button>
+        <div id="apuesta-section">
+            <input type="number" id="monto" placeholder="Monto de la apuesta">
+            <button onclick="realizarApuesta()">Apostar</button>
+            <p>Tipo de Apuesta:</p>
+            <select id="tipoApuesta">
+                <option value="250">0-250 (Pago x2)</option>
+                <option value="500">0-500 (Pago x1)</option>
+                <option value="750">0-750 (Pago x0.5)</option>
+            </select>
+        </div>
+        <p id="resultado"></p>
+    </div>
+    <script src="apuestas.js"></script>
+</body>
+</html>
