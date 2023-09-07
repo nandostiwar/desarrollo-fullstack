@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmaker</title>
+</head>
+<body>
+    <h1>Bookmaker</h1>
+    <div>
+        <h2>Balance: $<span id="balance">0</span></h2>
+        <button onclick="loadBalance()">Load Balance</button>
+        <input type="number" id="balanceInput" placeholder="Enter amount">
+    </div>
+    <div>
+        <h2>Place Bet:</h2>
+        <input type="number" id="betAmount" placeholder="Bet amount">
+        <button onclick="placeBet()">Bet</button>
+        <p id="betResult"></p>
+    </div>
+    <div>
+        <h2>Choose Bet Type:</h2>
+        <button onclick="playT1()">T1 (0-250)</button>
+        <button onclick="playT2()">T2 (0-500)</button>
+        <button onclick="playT3()">T3 (0-750)</button>
+    </div>
+    <div>
+        <h2>Game Result:</h2>
+        <p id="gameOutcome"></p>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function updateBalance() {
+            document.getElementById("balance").textContent = balance;
+        }
+
+        function loadBalance() {
+            const amount = parseFloat(document.getElementById("balanceInput").value);
+            if (!isNaN(amount) && amount > 0) {
+                balance += amount;
+                updateBalance();
+            }
+        }
+
+        function placeBet() {
+            const betAmount = parseFloat(document.getElementById("betAmount").value);
+            if (!isNaN(betAmount) && betAmount > 0) {
+                if (betAmount <= balance) {
+                    return true;
+                } else {
+                    document.getElementById("betResult").textContent = "Insuficiente saldo mk recargue.";
+                    return false;
+                }
+            } else {
+                document.getElementById("betResult").textContent = "monto invalido.";
+                return false;
+            }
+        }
+
+        function playT1() {
+            if (placeBet()) {
+                const randomNumber = Math.floor(Math.random() * 1000) + 1;
+                if (randomNumber >= 0 && randomNumber <= 250) {
+                    balance += 2 * parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu ganas! ${randomNumber}.`;
+                } else {
+                    balance -= parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu pierdes! ${randomNumber}.`;
+                }
+                updateBalance();
+            }
+        }
+
+        function playT2() {
+            if (placeBet()) {
+                const randomNumber = Math.floor(Math.random() * 1000) + 1;
+                if (randomNumber >= 0 && randomNumber <= 500) {
+                    balance += 2 * parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu ganas! ${randomNumber}.`;
+                } else {
+                    balance -= parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu pierdes!  ${randomNumber}.`;
+                }
+                updateBalance();
+            }
+        }
+
+        function playT3() {
+            if (placeBet()) {
+                const randomNumber = Math.floor(Math.random() * 1000) + 1;
+                if (randomNumber >= 0 && randomNumber <= 750) {
+                    balance += 0.5 * parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu ganas! ${randomNumber}.`;
+                } else {
+                    balance -= parseFloat(document.getElementById("betAmount").value);
+                    document.getElementById("gameOutcome").textContent = `tu pierde! ${randomNumber}.`;
+                }
+                updateBalance();
+            }
+        }
+    </script>
+</body>
+</html>
+
