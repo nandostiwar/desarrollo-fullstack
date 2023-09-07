@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="casa.css">
+    <script src="casa.js" defer></script>
+
+    <title>Casa de Apuestas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Casa de Apuestas</h1>
+        <div class="saldo">
+            <p>Saldo actual: <span id="saldo">0</span> pesos</p>
+            <button id="cargarSaldo">Cargar Plata</button>
+        </div>
+        <div class="apuestas">
+            <h2>Realizar Apuesta</h2>
+            <label for="tipoApuesta">Selecciona el tipo de apuesta:</label>
+            <select id="tipoApuesta">
+                <option value="1">Tipo 1 (25%)</option>
+                <option value="2">Tipo 2 (50%)</option>
+                <option value="3">Tipo 3 (75%)</option>
+            </select>
+            <button id="apostar">Apostar</button>
+        </div>
+        <div class="resultado">
+            <p>Resultado:</p>
+            <p id="resultadoTexto"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
