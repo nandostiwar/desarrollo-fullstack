@@ -29,7 +29,7 @@ btnApostar.addEventListener('click', ()=>{
         if(t.value == "t2"){
             numeroMaquina = Math.floor(Math.random() * (1000 - 1) * 1);
             if(numeroMaquina >= 0 && numeroMaquina<=500){
-                saldoUsuario.value = parseInt(saldoUsuario.value) + parseInt(saldoApostar.value) +  parseInt(saldoApostar.value);
+                saldoUsuario.value = parseInt(saldoUsuario.value) + parseInt(saldoApostar.value);
                 //numAleatorio.innerText = numeroMaquina;
             }
         }
