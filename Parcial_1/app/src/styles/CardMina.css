@@ -1,0 +1,16 @@
+.mina{
+    background-color: lightblue;
+    padding: 50px;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 50px;
+}
+
+#red{
+    background-color: red;
+}
+
+#green{
+    background-color: greenyellow;
+}
