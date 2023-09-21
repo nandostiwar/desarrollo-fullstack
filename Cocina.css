@@ -1,0 +1,19 @@
+.app{
+    text-align: center;
+  }
+  .Cocina{
+    gap: 10px;
+    padding: 30px;
+    background-color: #419197;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+  .input{
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
