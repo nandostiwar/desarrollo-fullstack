@@ -1,0 +1,165 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid #0a0a0a;
+  border-radius: 5px;
+  background-color: #111010;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.horoscopo {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signo {
+  /* Horoscopo.css */
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.select-container {
+  margin: 20px auto;
+  width: 300px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.Boton {
+  height: 20vh;
+  margin-top: 20px;
+}
+.Cuadros{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el cuadro */
+.cuadro {
+  width: 50px; /* Ancho del cuadro */
+  height: 50px; /* Alto del cuadro */
+  background-color: #f3eded; /* Color de fondo del cuadro (puedes cambiarlo) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente del número (puedes cambiarlo) */
+  color: #110f0f; /* Color del número (puedes cambiarlo) */
+}
+.Cuadros1{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 15vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el cuadro */
+.cuadro1 {
+  width: 50px; /* Ancho del cuadro */
+  height: 50px; /* Alto del cuadro */
+  background-color: #f3eded; /* Color de fondo del cuadro (puedes cambiarlo) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente del número (puedes cambiarlo) */
+  color: #110f0f; /* Color del número (puedes cambiarlo) */
+}
+.Cuadros2{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 5vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el cuadro */
+.cuadro2 {
+  width: 50px; /* Ancho del cuadro */
+  height: 50px; /* Alto del cuadro */
+  background-color: #f3eded; /* Color de fondo del cuadro (puedes cambiarlo) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente del número (puedes cambiarlo) */
+  color: #110f0f; /* Color del número (puedes cambiarlo) */
+}
+.Cuadros3{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 15vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el cuadro */
+.cuadro3 {
+  width: 50px; /* Ancho del cuadro */
+  height: 50px; /* Alto del cuadro */
+  background-color: #f3eded; /* Color de fondo del cuadro (puedes cambiarlo) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente del número (puedes cambiarlo) */
+  color: #110f0f; /* Color del número (puedes cambiarlo) */
+}
+.Cuadros4{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 5vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el cuadro */
+.cuadro4 {
+  width: 50px; /* Ancho del cuadro */
+  height: 50px; /* Alto del cuadro */
+  background-color: #f3eded; /* Color de fondo del cuadro (puedes cambiarlo) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño de fuente del número (puedes cambiarlo) */
+  color: #110f0f; /* Color del número (puedes cambiarlo) */
+}
