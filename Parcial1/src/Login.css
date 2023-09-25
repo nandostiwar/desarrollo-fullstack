@@ -1,0 +1,60 @@
+/* Login.css */
+
+/* Contenedor principal del formulario de inicio de sesión */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Estilos para el título "Iniciar sesión" */
+  .login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los campos de entrada */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para las etiquetas de los campos de entrada */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Estilos para los campos de entrada de texto y contraseña */
+  input[type="user"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  .Btn_ini{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el mensaje de error */
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Puedes agregar más estilos personalizados según tus preferencias */

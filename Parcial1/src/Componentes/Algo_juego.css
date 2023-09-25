@@ -1,0 +1,99 @@
+/* Juego.css */
+
+/* Contenedor principal del juego */
+.juego-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Estilos para el título "Juego" */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de los botones */
+  .botones-container {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+  }
+  
+  button.green {
+    background-color: green;
+    color: white;
+  }
+  
+  button.red {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Estilos para el resultado */
+  p {
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para los botones de acción */
+  .acciones {
+    margin-top: 20px;
+  }
+  
+  .acciones button {
+    width: auto;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button.trampa {
+    background-color: red;
+    color: white;
+    pointer-events: none; /* Deshabilita la interacción en el botón con trampa */
+  }
+
+  button.green {
+    background-color: green;
+    color: white;
+  }
+  
+  
+  /* Puedes ajustar y personalizar estos estilos según tus preferencias */
+  
+  
+  
+  
+  
+  
+  
