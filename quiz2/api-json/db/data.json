@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Hernan",
+    "edad": "21",
+    "correo": "hernan@gmail.com",
+    "telefono": "2321344431",
+    "estrato": "2"
+  },
+  {
+    "nombre": "cuadrado",
+    "edad": "22",
+    "correo": "cuadra@gmail.com",
+    "telefono": "322121225",
+    "estrato": "1"
+  },
+  {
+    "nombre": "Daniela",
+    "edad": "18",
+    "correo": "dani@gmail.com",
+    "telefono": "3203913214",
+    "estrato": "3"
+  },
+  {
+    "nombre": "Carlos",
+    "edad": "25",
+    "correo": "Carlos@gmail.com",
+    "telefono": "3543434321",
+    "estrato": "2"
+  },
+  {
+    "nombre": "Victor",
+    "edad": "35",
+    "correo": "victory@hotmail.com",
+    "telefono": "345633443",
+    "estrato": "3"
+  },
+  {
+    "nombre": "camila",
+    "edad": "23",
+    "correo": "camil@gmail.com",
+    "telefono": "3456734245",
+    "estrato": "4"
+  },
+  {
+    "nombre": "Juan",
+    "edad": "22",
+    "correo": "Juancha@gmail.com",
+    "telefono": "3498582834",
+    "estrato": "5"
+  },
+  {
+    "nombre": "Diego",
+    "edad": "44",
+    "correo": "Diegol@gmail.com",
+    "telefono": "3213246513",
+    "estrato": "4"
+  }
+]
