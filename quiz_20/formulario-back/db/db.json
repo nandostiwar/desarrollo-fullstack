@@ -1,0 +1,52 @@
+{
+  "clientes": [
+    {
+      "hora": "2023-10-12T00:47:19.827Z",
+      "nombre": "hhhhh",
+      "edad": "67",
+      "telefono": "12344",
+      "correo": "emailtest",
+      "estrato": "4"
+    },
+    {
+      "hora": "2023-10-12T00:48:13.450Z",
+      "nombre": "jjjjjj",
+      "edad": "45",
+      "telefono": "412211",
+      "correo": "hotmail",
+      "estrato": "3"
+    },
+    {
+      "hora": "2023-10-12T01:20:24.976Z",
+      "nombre": "Jhon",
+      "edad": "31",
+      "telefono": "3133123121",
+      "correo": "jhon@email",
+      "estrato": "5"
+    },
+    {
+      "hora": "2023-10-12T01:22:30.781Z",
+      "nombre": "William",
+      "edad": "22",
+      "telefono": "22",
+      "correo": "22",
+      "estrato": "6"
+    },
+    {
+      "hora": "2023-10-14T21:13:45.600Z",
+      "nombre": "Anna",
+      "edad": "21",
+      "telefono": "3154111321",
+      "correo": "anna@email.com",
+      "estrato": "2"
+    },
+    {
+      "hora": "2023-10-14T21:23:48.031Z",
+      "nombre": "roberto",
+      "edad": "89",
+      "telefono": "123111231",
+      "correo": "r@email.com",
+      "estrato": "2"
+    }
+  ]
+}
