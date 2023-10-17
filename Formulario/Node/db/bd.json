@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "John",
+    "edad": "20",
+    "telefono": "12345",
+    "correo": "john@gmail.com",
+    "estrato": "1"
+  },
+  {
+    "nombre": "John",
+    "edad": "20",
+    "telefono": "12345",
+    "correo": "john@gmail.com",
+    "estrato": "3"
+  },
+  {
+    "nombre": "Juan",
+    "edad": "15",
+    "telefono": "3899",
+    "correo": "juan@hotmail.com",
+    "estrato": "3"
+  },
+  {
+    "nombre": "ingrid",
+    "edad": "20",
+    "telefono": "07077",
+    "correo": "ingrid@gmail.com",
+    "estrato": "4"
+  },
+  {
+    "nombre": "steven",
+    "edad": "25",
+    "telefono": "7836827",
+    "correo": "steven@gmail.com",
+    "estrato": "3"
+  },
+  {
+    "nombre": "jeisson",
+    "edad": "33",
+    "telefono": "1233",
+    "correo": "jeisson@gmail.com",
+    "estrato": "2"
+  }
+]
