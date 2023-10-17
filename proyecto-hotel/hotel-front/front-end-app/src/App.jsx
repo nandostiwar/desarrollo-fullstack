@@ -10,8 +10,7 @@ function App() {
       try {
         const response = await fetch('http://localhost:4700/v1/hotel');
         const result = await response.json();
-        const habitaciones = result.habitaciones;
-        setRooms(habitaciones);
+        setRooms(result);
       } catch (error) {
         console.error('Error al obtener datos:', error);
       }
@@ -23,10 +22,10 @@ function App() {
   return (
     <>
       { (rooms.length === 0) ? "Cargando": rooms.map((room)=>{
-        if(room.libre === "Si"){
-          return <CardRoom tipo={room.tipo} numero={room.numero} libre={room.libre} color='green'/>
-        }else if(room.libre==="No"){
-          return <CardRoom tipo={room.tipo} numero={room.numero} libre={room.libre} color='red'/>
+        if(room.Libre === "Si"){
+          return <CardRoom tipo={room.tipo} numero={room.numero} libre={room.Libre} color='green'/>
+        }else if(room.Libre==="No"){
+          return <CardRoom tipo={room.tipo} numero={room.numero} libre={room.Libre} color='red'/>
         }
         
       })}
