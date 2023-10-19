@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import '../styles/AdminView.css'
+import TableUsers from "./TableUsers";
+import TableProducts from "./TableProducts";
+import TableSales from "./TableSales";
+import '../styles/AdminView.css';
 
 function AdminView({userRol}){
     if(userRol !== 'admin'){
@@ -12,6 +15,27 @@ function AdminView({userRol}){
     const [nombreProducto, setNombreProducto] = useState('');
     const [precio, setPrecio] = useState('');
     const goTo = useNavigate();
+    const [dataUsers, setDataUsers] = useState([]);
+    const [dataProducts, setDataProducts] = useState([]);
+    const [dataSales, setDataSales] = useState([]);
+
+    async function fetchDataUsers(){
+        const result = await fetch('http://localhost:4200/v1/tienda/usuarios');
+        const resultJson = await result.json();
+        setDataUsers(resultJson)
+    }
+
+    async function fetchDataProducts(){
+        const result = await fetch('http://localhost:4200/v1/tienda/productos');
+        const resultJson = await result.json();
+        setDataProducts(resultJson)
+    }
+
+    async function fetchdataSales(){
+        const result = await fetch('http://localhost:4200/v1/tienda/ventas');
+        const resultJson = await result.json();
+        setDataSales(resultJson)
+    }
 
     async function handleClickCreate(){
         const result = await fetch('http://localhost:4200/v1/tienda/crear', {
@@ -74,14 +98,29 @@ function AdminView({userRol}){
             <div className="container-delete-product">
                 <h4>Borrar un producto</h4>
                 <input type="text" placeholder="nombre del producto a eliminar" onChange={(e)=>{setNombreProducto(e.target.value)}}/><br/>
-                <button onClick={handleDeleteProduct}>Borrar este usuario</button>
+                <button onClick={handleDeleteProduct}>Borrar este producto</button>
             </div>
             <div className="container-buttons">
-                <button>mostrar usuarios</button>
-                <button>mostrar productos</button>
-                <button>mostrar ventas</button>
+                <button onClick={fetchDataUsers}>mostrar usuarios</button>
+                <button onClick={fetchDataProducts}>mostrar productos</button>
+                <button onClick={fetchdataSales}>mostrar ventas</button>
                 <button onClick={handleVolver}>volver</button>
             </div>
+            <div className="container-divs-tables">
+                <div className="container-table-users">
+                    <h3>usuarios</h3>
+                    <TableUsers data={dataUsers}/>
+                </div>
+                <div className="container-table-products">
+                    <h3>productos</h3>
+                    <TableProducts dataProducts={dataProducts}/>
+                </div>
+                <div className="container-table-sales">
+                    <h3>ventas</h3>
+                    <TableSales dataSales={dataSales}/>
+                </div>
+            </div>
+            
         </div>
         
     )

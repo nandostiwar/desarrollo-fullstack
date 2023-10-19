@@ -1,0 +1,19 @@
+.container-general{
+    width: 900px;
+}
+
+.container-divs-tables{
+    display: flex;
+}
+
+.container-table-users{
+    width: 300px;
+}
+
+.container-table-products{
+    width: 300px;
+}
+
+.container-table-sales{
+    width: 300px;
+}

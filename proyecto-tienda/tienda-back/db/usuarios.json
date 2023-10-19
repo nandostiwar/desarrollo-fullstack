@@ -4,11 +4,15 @@
     "rol": "admin"
   },
   {
-    "nombre": "Maria",
+    "nombre": "Susana",
+    "rol": "mesero"
+  },
+  {
+    "nombre": "Aminero",
     "rol": "admin"
   },
   {
-    "nombre": "Susana",
-    "rol": "mesero"
+    "nombre": "Ricardo",
+    "rol": "admin"
   }
 ]

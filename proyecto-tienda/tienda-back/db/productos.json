@@ -1,9 +1,5 @@
 [
   {
-    "nombreProducto": "papa de mil",
-    "precio": "1000"
-  },
-  {
     "nombreProducto": "papa rellena",
     "precio": "3000"
   },
@@ -14,5 +10,9 @@
   {
     "nombreProducto": "chorizo ahumado",
     "precio": "4000"
+  },
+  {
+    "nombreProducto": "sancocho",
+    "precio": "12000"
   }
 ]

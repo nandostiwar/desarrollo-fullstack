@@ -10,5 +10,9 @@
   {
     "nombreProducto": "arepa",
     "cantidad": "3"
+  },
+  {
+    "nombreProducto": "sancocho",
+    "cantidad": "10"
   }
 ]

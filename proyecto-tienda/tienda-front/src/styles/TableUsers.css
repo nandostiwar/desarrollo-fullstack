@@ -1,0 +1,27 @@
+table{
+    text-align: left;
+    width: 100%;
+    margin: 20px;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 20px;
+}
+
+thead{
+    border-bottom: solid 2px;
+}
+
+#table-user thead{
+    background-color: #246355;
+}
+#table-products thead{
+    background-color: #4dad99;
+}
+#table-sales thead{
+    background-color: #2d7c94;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}

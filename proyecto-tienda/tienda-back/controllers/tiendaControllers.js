@@ -13,6 +13,12 @@ async function getAllProducts(req, res){
     res.json(objProducts);
 }
 
+async function getAllSales(req, res){
+    const dataJsonSales = await fs.readFile(path.join(__dirname, '../db/ventas.json'));
+    const objSales = JSON.parse(dataJsonSales);
+    res.json(objSales);
+}
+
 async function validateUser(req, res){
     const username = req.params.username;
     const dataJsonUsers = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
@@ -97,6 +103,7 @@ async function createSale(req, res){
 module.exports = {
     getAllUsers,
     getAllProducts,
+    getAllSales,
     validateUser,
     createUser,
     createProduct,
