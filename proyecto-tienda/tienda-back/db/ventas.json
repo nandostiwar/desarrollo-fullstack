@@ -14,5 +14,9 @@
   {
     "nombreProducto": "sancocho",
     "cantidad": "10"
+  },
+  {
+    "nombreProducto": "arroz mixto",
+    "cantidad": "20000"
   }
 ]

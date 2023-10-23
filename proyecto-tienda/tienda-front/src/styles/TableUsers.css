@@ -16,12 +16,30 @@ thead{
     background-color: #246355;
 }
 #table-products thead{
-    background-color: #4dad99;
+    background-color: #1aa88c;
 }
 #table-sales thead{
     background-color: #2d7c94;
 }
 
-tr:nth-child(even){
-    background-color: #ddd;
+#table-products tr:nth-child(even){
+    background-color: #88c4b6;
+}
+#table-user tr:nth-child(even){
+    background-color: #41ad98;
+}
+#table-sales tr:nth-child(even){
+    background-color: #84b6c5;
+}
+
+#table-products{
+    background-color: #69afa1;
+}
+
+#table-user{
+    background-color: #268b76;
+}
+
+#table-sales{
+    background-color: #6ca5b6;
 }

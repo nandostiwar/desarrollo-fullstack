@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import '../styles/MeseroView.css';
 
 function MeseroView({userRol}){
     if(userRol !== 'mesero'){
@@ -23,14 +24,14 @@ function MeseroView({userRol}){
     }
 
     return (
-        <div>
+        <div className="container-mesero-view">
             <h4>Crear una venta</h4>
             <form onSubmit={handleSubmitCreateSale}>
-                <input type="text" placeholder="producto" onChange={(e)=>{setNombreProducto(e.target.value)}}/>
-                <input type="text" placeholder="cantidad" onChange={(e)=>{setCantidad(e.target.value)}}/><br/>
-                <input type="submit" value="Crear venta"/>
+                <input type="text" className="btn-txt" placeholder="producto" onChange={(e)=>{setNombreProducto(e.target.value)}}/>
+                <input type="text" className="btn-txt" placeholder="cantidad" onChange={(e)=>{setCantidad(e.target.value)}}/><br/>
+                <input type="submit" id="crear-venta" value="Crear venta"/>
             </form>
-            <button onClick={handleVolver}>volver</button>
+            <button onClick={handleVolver}>Volver</button>
         </div>
     )
 }

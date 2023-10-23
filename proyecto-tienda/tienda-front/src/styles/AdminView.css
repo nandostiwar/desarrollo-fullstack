@@ -1,5 +1,6 @@
 .container-general{
-    width: 900px;
+    height: 100%;
+    width: 900px;;
 }
 
 .container-divs-tables{
@@ -16,4 +17,46 @@
 
 .container-table-sales{
     width: 300px;
+}
+
+.container-create-user{
+    background-color: #b0c2f2;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+.container-create-product{
+    background-color: #ffda9e;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+.container-delete-user{
+    background-color: #e0ffff;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+.container-delete-product{
+    background-color: #ffc0cb;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+input{
+    text-align: center;
+    border-radius: 10px;
+    height: 35px;
+    width: 300px;
+}
+
+select{
+    text-align: center;
+    border-radius: 10px;
+    height: 30px;
+    width: 150px;
 }
