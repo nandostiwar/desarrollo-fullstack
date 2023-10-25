@@ -86,37 +86,37 @@ function AdminVista({userRol}){
             </div>
             <div className="container-crear-producto">
                 <h4>Crear producto</h4>
-                <input type="text" placeholder="Nombre del producto" onChange={(e)=>{setNombreProducto(e.target.value)}}/><br/>
-                <input type="text" placeholder="Precio del producto" onChange={(e)=>{setPrecio(e.target.value)}}/><br />
+                <input type="text" placeholder="Nombre Producto" onChange={(e)=>{setNombreProducto(e.target.value)}}/><br/>
+                <input type="text" placeholder="Precio" onChange={(e)=>{setPrecio(e.target.value)}}/><br />
                 <button onClick={handleClickCrearProductos}>Crear producto</button>
             </div>
             <div className="container-eliminar-usuario">
-                <h4>Borrar un usuario</h4>
+                <h4>Borrar Usuario</h4>
                 <input type="text" placeholder="Eliminar usuario" onChange={(e)=>{setUsername(e.target.value)}}/><br/>
                 <button onClick={handleEliminarUsuario}>Borrar usuario</button>
             </div>
             <div className="container-eliminar-producto">
-                <h4>Borrar un producto</h4>
-                <input type="text" placeholder="nombre del producto a eliminar" onChange={(e)=>{setNombreProducto(e.target.value)}}/><br/>
+                <h4>Borrar Producto</h4>
+                <input type="text" placeholder="Eliminar producto" onChange={(e)=>{setNombreProducto(e.target.value)}}/><br/>
                 <button onClick={handleEliminarProducto}>Borrar producto</button>
             </div>
             <div className="container-buttons">
-                <button onClick={fetchDataUsuarios}>Mostrar usuarios</button>
-                <button onClick={fetchDataProductos}>Mostrar productos</button>
-                <button onClick={fetchdataVentas}>Mostrar ventas</button>
+                <button onClick={fetchDataUsuarios}>Mostrar Usuarios</button>
+                <button onClick={fetchDataProductos}>Mostrar Productos</button>
+                <button onClick={fetchdataVentas}>Mostrar Ventas</button>
                 <button onClick={handleVolver}>Volver</button>
             </div>
             <div className="container-divs-tables">
                 <div className="container-table-users">
-                    <h3>usuarios</h3>
+                    <h3> Consulta de Usuarios</h3>
                     <Users data={dataUsuarios}/>
                 </div>
                 <div className="container-table-productos">
-                    <h3>productos</h3>
+                    <h3>Consulta de Productos</h3>
                     <Productos dataProductos={dataProductos}/>
                 </div>
                 <div className="container-ventas">
-                    <h3>ventas</h3>
+                    <h3>Consulta de Ventas</h3>
                     <Ventas dataVentas={dataVentas}/>
                 </div>
             </div>
