@@ -1,0 +1,45 @@
+table{
+    text-align: left;
+    width: 100%;
+    margin: 20px;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 20px;
+}
+
+thead{
+    border-bottom: solid 2px;
+}
+
+#table-user thead{
+    background-color: #246355;
+}
+#table-productos thead{
+    background-color: #1aa88c;
+}
+#ventas thead{
+    background-color: #2d7c94;
+}
+
+#table-productos tr:nth-child(even){
+    background-color: #88c4b6;
+}
+#table-user tr:nth-child(even){
+    background-color: #41ad98;
+}
+#ventas tr:nth-child(even){
+    background-color: #84b6c5;
+}
+
+#table-productos{
+    background-color: #69afa1;
+}
+
+#table-user{
+    background-color: #268b76;
+}
+
+#ventas{
+    background-color: #6ca5b6;
+}

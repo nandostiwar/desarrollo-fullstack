@@ -1,0 +1,27 @@
+.container-mesero-vista{
+    border: 2px solid #000;
+    padding: 50px;
+    background-color: #b0c2f2;
+    border-radius: 50px;
+}
+
+.container-mesero-vista #crear-venta, button{
+    background-color: #3d5e86;
+    padding: 9px;
+    margin: 10px;
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.container-mesero-vista .btn-txt{
+    margin: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+
+.container-mesero-vista h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

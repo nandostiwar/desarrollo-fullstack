@@ -1,0 +1,18 @@
+[
+  {
+    "nombreProducto": "pony malta",
+    "precio": "2300"
+  },
+  {
+    "nombreProducto": "Salchicostilla",
+    "precio": "20.000"
+  },
+  {
+    "nombreProducto": "Hamburguesa_Doblequeso",
+    "precio": "17.000"
+  },
+  {
+    "nombreProducto": "salchipapa sencilla",
+    "precio": "9.000"
+  }
+]
