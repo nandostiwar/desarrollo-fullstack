@@ -13,33 +13,33 @@ thead{
 }
 
 #table-user thead{
-    background-color: #246355;
+    background-color: #49cab0;
 }
 #table-productos thead{
-    background-color: #1aa88c;
+    background-color: #49cab0;
 }
 #ventas thead{
-    background-color: #2d7c94;
+    background-color: #49cab0;
 }
 
 #table-productos tr:nth-child(even){
-    background-color: #88c4b6;
+    background-color: #f2f8f7;
 }
 #table-user tr:nth-child(even){
-    background-color: #41ad98;
+    background-color: #758481;
 }
 #ventas tr:nth-child(even){
-    background-color: #84b6c5;
+    background-color: #23c5f7;
 }
 
 #table-productos{
-    background-color: #69afa1;
+    background-color: #04aa89;
 }
 
 #table-user{
-    background-color: #268b76;
+    background-color: #5fc283;
 }
 
 #ventas{
-    background-color: #6ca5b6;
+    background-color: #20a4cc;
 }

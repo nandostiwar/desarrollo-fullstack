@@ -25,9 +25,9 @@ function Form({callback}){
     }
     return (
         <div className="container-form">
-            <h4>Delicia Express</h4>
+            <h1>Delicia Express</h1>
             <form onSubmit={handleSubmit}>
-                <input id="input-name" type="text" placeholder="Nombre de usuario" onChange={(e)=>setUsername(e.target.value)}/><br />
+                <input id="input-name" type="text" placeholder="Nombre de Usuario" onChange={(e)=>setUsername(e.target.value)}/><br />
                 <input id="btn-submit" type="submit" value="INGRESAR"/>
             </form>
         </div>
