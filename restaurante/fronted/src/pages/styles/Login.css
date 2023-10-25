@@ -1,0 +1,37 @@
+.container_principal {
+  background-color: #c0dad8;
+}
+
+.login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px #ccc;
+    text-align: center;
+  }
+  
+  .login img {
+    width: 130px; /* Cambia el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-right: 10px; /* Ajusta los márgenes según tus necesidades */
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+  
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  
+  
+  

@@ -1,0 +1,22 @@
+[
+  {
+    "nombreProducto": "empanada",
+    "Unidad": 2
+  },
+  {
+    "nombreProducto": "papa",
+    "Unidad": 5
+  },
+  {
+    "nombreProducto": "Caña",
+    "Unidad": 3
+  },
+  {
+    "nombreProducto": "Frituras",
+    "Unidad": "12"
+  },
+  {
+    "nombreProducto": "frijol",
+    "Unidad": "2"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "12133456",
+    "username": "Diego",
+    "age": "37",
+    "password": "diego123",
+    "role": "Administrador"
+  },
+  {
+    "id": "12365432",
+    "username": "Hernan",
+    "age": "21",
+    "password": "hernan123",
+    "role": "Administrador"
+  },
+  {
+    "id": "123421003",
+    "username": "Luisa",
+    "age": "18",
+    "password": "luisa123",
+    "role": "Mesero"
+  },
+  {
+    "id": "123556700",
+    "username": "Camilo",
+    "age": "23",
+    "password": "camilo123",
+    "role": "Mesero"
+  },
+  {
+    "id": "11603400",
+    "username": "Andrea",
+    "age": "25",
+    "password": "andrea123",
+    "role": "Mesero"
+  },
+  {
+    "id": "127465300",
+    "username": "Camila",
+    "age": "21",
+    "password": "camila123",
+    "role": "Mesero"
+  },
+  {
+    "id": "181256566",
+    "username": "Julio",
+    "age": "33",
+    "password": "julio123",
+    "role": "Mesero"
+  },
+  {
+    "id": "120433543",
+    "username": "Juan",
+    "password": "juan123",
+    "age": "23",
+    "role": "Mesero"
+  },
+  {
+    "id": "312322111",
+    "username": "Jhon",
+    "password": "jhon123",
+    "age": "44",
+    "role": "Administrador"
+  },
+  {
+    "id": "45478478",
+    "username": "Angela",
+    "password": "angela123",
+    "age": "50",
+    "role": "Mesero"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "productName": "Pescado",
+    "price": "20000"
+  },
+  {
+    "id": "2",
+    "productName": "Carne",
+    "price": "15000"
+  },
+  {
+    "id": "3",
+    "productName": "Arroz",
+    "price": "10000"
+  },
+  {
+    "id": "5",
+    "productName": "Pan",
+    "price": "5000"
+  },
+  {
+    "id": "21",
+    "productName": "Salchicha",
+    "price": "32000"
+  }
+]
