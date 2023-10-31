@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "perro",
+    "precio": 2
+  },
+  {
+    "nombre": "hamburguesa",
+    "precio": 2.5
+  },
+  {
+    "nombre": "sandwich",
+    "precio": 3000
+  },
+  {
+    "nombre": "papitas fritas",
+    "precio": 10000
+  },
+  {
+    "nombre": "carnes frias",
+    "precio": 7000
+  }
+]

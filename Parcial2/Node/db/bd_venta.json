@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "helados",
+    "cantidad": "2"
+  },
+  {
+    "nombre": "sandwich",
+    "cantidad": "5"
+  },
+  {
+    "nombre": "carnes frias",
+    "cantidad": "7"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "mesero1",
+    "tipo": "user"
+  },
+  {
+    "nombre": "admin",
+    "tipo": "admin"
+  },
+  {
+    "nombre": "mesero2",
+    "tipo": "admin"
+  },
+  {
+    "nombre": "mesero3",
+    "tipo": "user"
+  },
+  {
+    "nombre": "mesero4",
+    "tipo": "user"
+  }
+]
