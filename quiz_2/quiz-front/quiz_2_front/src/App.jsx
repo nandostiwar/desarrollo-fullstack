@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import ButtonCounter from './components/ButtonCounter';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,20 +21,11 @@ function App() {
   }
   ,[])
 
-  function handleClick(e){
-    const boton = e.target.value;
-    const numero = e.target.innerText;
-    fetch(`http://localhost:4700/v1/boton/changeNumber/${boton}`, {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({numero})
-            });
-  }
   return (
     <>
-      <button value="boton1" onClick={handleClick}>{objBtn.boton1}</button><br/>
-      <button value="boton2" onClick={handleClick}>{objBtn.boton2}</button><br/>
-      <button value="boton3" onClick={handleClick}>{objBtn.boton3}</button>
+      <ButtonCounter value={"boton1"} contador={objBtn.boton1}/><br />
+      <ButtonCounter value={"boton2"} contador={objBtn.boton2}/><br />
+      <ButtonCounter value={"boton3"} contador={objBtn.boton3}/>
     </>
   )
 }

@@ -1,5 +1,4 @@
-const fs = require('fs/promises');
-const path = require('path');
+
 const Room = require('../schema/room.js');
 
 const getAllRooms = async (req, res)=>{

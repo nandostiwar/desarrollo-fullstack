@@ -18,5 +18,9 @@
   {
     "nombreProducto": "arroz mixto",
     "cantidad": "20000"
+  },
+  {
+    "nombreProducto": "papa rellena",
+    "cantidad": "15"
   }
 ]

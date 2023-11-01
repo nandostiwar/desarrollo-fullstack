@@ -14,5 +14,9 @@
   {
     "nombre": "Liliana",
     "rol": "mesero"
+  },
+  {
+    "nombre": "nando",
+    "rol": "admin"
   }
 ]
