@@ -1,29 +1,32 @@
-const fs = require('fs/promises');
-const path = require('path');
+const pool = require('../db/connection.js');
 
 async function getAllUsers(req, res){
-    const dataJsonUsers = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
-    const objUsers = JSON.parse(dataJsonUsers);
-    res.json(objUsers);
+    try{
+        const result = await pool.query("SELECT * FROM users");
+        res.json(result.rows);
+    }catch(e){
+        res.json({error: e});
+    }
 }
 
 async function getAllProducts(req, res){
-    const dataJsonProducts = await fs.readFile(path.join(__dirname, '../db/productos.json'));
-    const objProducts = JSON.parse(dataJsonProducts);
-    res.json(objProducts);
+    try{
+        const resultProducts = await pool.query("SELECT * FROM products");
+        res.json(resultProducts.rows);
+    }catch(e){
+        res.json({error: e});
+    }
 }
 
 async function getAllSales(req, res){
-    const dataJsonSales = await fs.readFile(path.join(__dirname, '../db/ventas.json'));
-    const objSales = JSON.parse(dataJsonSales);
-    res.json(objSales);
+    const resultSales = await pool.query("SELECT * FROM sales");
+    res.json(resultSales.rows);
 }
 
 async function validateUser(req, res){
     const username = req.params.username;
-    const dataJsonUsers = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
-    const arrayObjUsers = JSON.parse(dataJsonUsers);
-    const result = arrayObjUsers.filter((elem)=>{
+    const resultUsers = await pool.query("SELECT * FROM users");
+    const result = resultUsers.rows.filter((elem)=>{
         if(elem.nombre === username){
             return elem;
         }
@@ -33,70 +36,42 @@ async function validateUser(req, res){
 
 async function createUser(req, res){
     const {username, rol} = req.body;
-    const dataJsonUsers = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
-    const arrayObjUsers = JSON.parse(dataJsonUsers);
-    arrayObjUsers.push({
-        nombre: username,
-        rol: rol
-    })
-    await fs.writeFile(path.join(__dirname, '../db/usuarios.json'), JSON.stringify(arrayObjUsers, null, 2), {encoding: 'utf-8'})
+    
+    await pool.query("INSERT INTO users(nombre, rol) VALUES ($1, $2)", [username, rol]);
     res.json({
-        message: "user created"
+        message: "user created succesfully"
     })
 }
 
 async function createProduct(req, res){
     const {nombreProducto, precio} = req.body;
-    const dataJsonProducts = await fs.readFile(path.join(__dirname, '../db/productos.json'));
-    const arrayObjProducts = JSON.parse(dataJsonProducts);
-    arrayObjProducts.push({
-        nombreProducto,
-        precio
-    })
-    await fs.writeFile(path.join(__dirname, '../db/productos.json'), JSON.stringify(arrayObjProducts, null, 2), {encoding: 'utf-8'})
+    await pool.query("INSERT INTO products(nombre_producto, precio) VALUES ($1, $2)", [nombreProducto, precio]);
     res.json({
-        message: "producte created"
+        message: "product created succesfully"
     })
 }
 
 async function deleteUser(req, res){
     const {username} = req.body;
-    const dataJsonUsers = await fs.readFile(path.join(__dirname, '../db/usuarios.json'));
-    const arrayObjUsers = JSON.parse(dataJsonUsers);
-    const resultUsersDeleted = arrayObjUsers.filter((user)=>{
-        if(user.nombre !== username){
-            return user
-        }
-    });
-    await fs.writeFile(path.join(__dirname, '../db/usuarios.json'), JSON.stringify(resultUsersDeleted, null, 2), {encoding: 'utf-8'})
+    await pool.query("DELETE FROM users WHERE nombre = $1", [username]);
     res.json({
-        message: "deleting user"
+        message: "user deleted succesfully"
     })
 }
 
 async function deleteProduct(req, res){
     const {nombreProducto} = req.body;
-    const dataJsonProducts = await fs.readFile(path.join(__dirname, '../db/productos.json'));
-    const arrayObjProducts = JSON.parse(dataJsonProducts);
-    const resultProductsDeleted = arrayObjProducts.filter((product)=>{
-        if(product.nombreProducto !== nombreProducto){
-            return product
-        }
-    });
-    await fs.writeFile(path.join(__dirname, '../db/productos.json'), JSON.stringify(resultProductsDeleted, null, 2), {encoding: 'utf-8'})
+    await pool.query("DELETE FROM products WHERE nombre_producto = $1", [nombreProducto]);
     res.json({
-        message: "deleting product"
+        message: "product deleted succesfully"
     })
 }
 
 async function createSale(req, res){
     const {nombreProducto, cantidad} = req.body;
-    const dataJsonSales = await fs.readFile(path.join(__dirname, '../db/ventas.json'))
-    const arrayObjSales = JSON.parse(dataJsonSales);
-    arrayObjSales.push({nombreProducto, cantidad});
-    await fs.writeFile(path.join(__dirname, '../db/ventas.json'), JSON.stringify(arrayObjSales, null, 2), {encoding: 'utf-8'});
+    await pool.query("INSERT INTO sales(nombre_producto, cantidad) VALUES ($1, $2)", [nombreProducto, cantidad]);
     res.json({
-        message: "Sale Recorded"
+        message: "sale created succesfully"
     })
 }
 

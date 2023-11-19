@@ -10,8 +10,8 @@ function TableProducts({dataProducts}){
             </thead>
             <tbody>
                 {dataProducts.map((product)=>(
-                    <tr key={product.nombreProducto}>
-                        <td>{product.nombreProducto}</td>
+                    <tr key={product.nombre_producto}>
+                        <td>{product.nombre_producto}</td>
                         <td>{product.precio}</td>
                     </tr>
                 ))}

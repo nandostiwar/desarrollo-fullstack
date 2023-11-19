@@ -9,8 +9,8 @@ function TableSales({dataSales}){
             </thead>
             <tbody>
                 {dataSales.map((sale)=>(
-                    <tr key={sale.nombreProducto}>
-                        <td>{sale.nombreProducto}</td>
+                    <tr key={sale.nombre_producto}>
+                        <td>{sale.nombre_producto}</td>
                         <td>{sale.cantidad}</td>
                     </tr>
                 ))}
