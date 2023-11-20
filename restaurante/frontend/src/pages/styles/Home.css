@@ -1,0 +1,27 @@
+.home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  
+  h1{
+    color: #009688;
+    text-align: center;
+    line-height:10px;
+    font-weight:bold;
+    font-size:25px;
+  }
+
+  .home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  .main-content {
+    background-color: #e1eceb;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

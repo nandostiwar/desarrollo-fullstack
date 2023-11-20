@@ -1,0 +1,38 @@
+
+  
+  h1{
+    color: #009688;
+    text-align: center;
+    line-height:10px;
+    font-weight:bold;
+    font-size:25px;
+  }
+
+  .horoscope img{
+    width: 125px;
+    height: 105px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p{
+    font-size:15px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .horoscope {
+    margin-top: 20px;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .horoscope h2 {
+    justify-content: center;
+    color: #009688;
+    text-align: center;
+  }
+  
