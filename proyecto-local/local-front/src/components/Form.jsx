@@ -3,12 +3,12 @@ import '../styles/Form.css';
 import { useNavigate } from "react-router-dom";
 
 function Form({callback}){
-    const [username, setUsername] = useState('');
+    const [usuarioname, setUsuarioname] = useState('');
     const goTo = useNavigate();
 
     async function handleSubmit(e){
         e.preventDefault();
-        const result = await fetch(`http://localhost:4200/v1/local/validar/${username}`, {
+        const result = await fetch(`http://localhost:4200/v1/local/validar/${usuarioname}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"}
         });
@@ -28,7 +28,7 @@ function Form({callback}){
         <div className="container-form">
             <h1>Delicia Express</h1>
             <form onSubmit={handleSubmit}>
-                <input id="input-name" type="text" placeholder="Nombre de Usuario" onChange={(e)=>setUsername(e.target.value)}/><br />
+                <input id="input-name" type="text" placeholder="Nombre de Usuario" onChange={(e)=>setUsuarioname(e.target.value)}/><br />
                 <input id="btn-submit" type="submit" value="INGRESAR"/>
             </form>
         </div>

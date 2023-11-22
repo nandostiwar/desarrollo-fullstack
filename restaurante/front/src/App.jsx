@@ -6,15 +6,15 @@ import Mesero from './pages/Mesero'
 import Admin from './pages/Admin'
 
 function App() {
-  const [userRole, setUserRole] = useState(null);
+  const [usuarioRole, setUsuarioRole] = useState(null);
 
   return (
 <BrowserRouter>
 
       <Routes>
-        <Route index element={<Login callback={setUserRole}/>}/>
-        <Route path='/Admin' element={<Admin userRole={userRole}/>} />
-        <Route path='/Mesero' element={<Mesero userRole={userRole}/>} />
+        <Route index element={<Login callback={setUsuarioRole}/>}/>
+        <Route path='/Admin' element={<Admin usuarioRole={usuarioRole}/>} />
+        <Route path='/Mesero' element={<Mesero usuarioRole={usuarioRole}/>} />
       </Routes>
     {/* <Routes>
       <Route path='/' element={<Navigate to= "/Login"/>}/>

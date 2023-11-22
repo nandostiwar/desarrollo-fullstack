@@ -5,12 +5,12 @@ import { useState } from 'react'
 import './App.css'
 const App = () => {
 
-  const[user, setUser] = useState ([])
+  const[usuario, setUsuario] = useState ([])
   return (
     <div className='App'>
       {
-        !user.length>0
-        ?<Formulario setUser={setUser} />
+        !usuario.length>0
+        ?<Formulario setUsuario={setUsuario} />
         :<Home/>
       }
      

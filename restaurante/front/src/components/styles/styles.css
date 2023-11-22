@@ -1,7 +1,7 @@
 header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
-	background:#75709a;
+	background:#1b0b91;
 	height: 80px;
     color: aliceblue;
     font-size: 20px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './stylescomp/styles.css'
+import './styles/styles.css'
 
 const Boton = ({ Nombre, onClick }) => {
   return (

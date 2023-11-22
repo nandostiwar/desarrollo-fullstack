@@ -1,11 +1,11 @@
 import React from 'react';
-import './stylescomp/tabla.css';
+import './styles/tabla.css';
 
-function UserTable({ users, onDeleteUser }) {
+function Usuario({ usuarios, onDeleteUsuario }) {
     return (
         <div>
             <h2 className='title'>Tabla de Usuarios</h2>
-            <table className="user-table">
+            <table className="usuario-table">
                 <thead>
                     <tr>
                         <th>Cedula</th>
@@ -16,14 +16,14 @@ function UserTable({ users, onDeleteUser }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {users.map((user) => (
-                        <tr key={user.username}>
-                            <td>{user.id}</td>
-                            <td>{user.username}</td>
-                            <td>{user.age}</td>
-                            <td>{user.role}</td>
+                    {usuarios.map((usuario) => (
+                        <tr key={usuario.usuarioname}>
+                            <td>{usuario.id}</td>
+                            <td>{usuario.usuarioname}</td>
+                            <td>{usuario.Edad}</td>
+                            <td>{usuario.role}</td>
                             <td>
-                                <button className="delete-button" onClick={() => onDeleteUser(user.username)}>Eliminar</button>
+                                <button className="delete-button" onClick={() => onDeleteUsuario(usuario.usuarioname)}>Eliminar</button>
                             </td>
                         </tr>
                     ))}
@@ -33,4 +33,4 @@ function UserTable({ users, onDeleteUser }) {
     );
 }
 
-export default UserTable;
+export default Usuario;

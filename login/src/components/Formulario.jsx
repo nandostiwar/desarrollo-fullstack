@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './Formulario.css'
-export function Formulario(setUser){
+export function Formulario(setUsuario){
     const navigate = useNavigate();
-  const userjuego = {
-    user: 'juego',
+  const usuariojuego = {
+    usuario: 'juego',
     pass: 'juego123',
   };
 
-  const usercocina = {
-    user: 'cocina',
+  const usuariococina = {
+    usuario: 'cocina',
     pass: 'cocina123',
   };
 
@@ -50,7 +50,7 @@ export function Formulario(setUser){
       <form id="form_login">
           <div>
               <h1 style={{color:"blue", textalign:"center"}}>LOGIN</h1>
-              <label htmlFor="txtusu"><strong>Username</strong></label>
+              <label htmlFor="txtusu"><strong>Usuarioname</strong></label>
               <input type="text" id="txtusu" style={{textAlign:"center"}} className="form-control"  onChange={ (e)=>setUsu(e.target.value) }  required/>
           </div>
           <div>

@@ -1,19 +1,19 @@
 
 import React, { useState } from 'react';
-import Boton from '../componentes/Boton';
+import Boton from '../components/Boton';
 import './styles/Login.css';
-import Header from '../componentes/Header';
+import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const Login = ({ callback }) => {
-  const [username, setUsername] = useState('');
+  const [usuarioname, setUsuarioname] = useState('');
   const [password, setPassword] = useState('');
   const goTo = useNavigate();
 
   const handleLogin = async () => {
-    if (!username) {
+    if (!usuarioname) {
       Swal.fire({
         icon:"error",
         title: 'campos vacios',
@@ -21,7 +21,7 @@ const Login = ({ callback }) => {
       });
       return; //detiene el proceso si no se cumple con los valores
     }
-    if (!username) {
+    if (!usuarioname) {
       Swal.fire({
         icon:"error",
         title: 'Ingresa el nombre de usuario',
@@ -32,7 +32,7 @@ const Login = ({ callback }) => {
     if (!password) {
       Swal.fire({
         icon:"error",
-        title:  'Ingresa la contraseña,' + username ,
+        title:  'Ingresa la contraseña,' + usuarioname ,
         text: '',
       });
       return;
@@ -44,12 +44,12 @@ const Login = ({ callback }) => {
         },
       };
 
-      const response = await axios.post(`http://localhost:4700/v1/restaurante/validation/${username}`, null, config);
+      const response = await axios.post(`http://localhost:4700/v1/restaurante/validation/${usuarioname}`, null, config);
       const serverResponse = response.data;
 
       console.log('Respuesta del servidor:',serverResponse);
 
-      if (serverResponse.username) {
+      if (serverResponse.usuarioname) {
         if(serverResponse.role === 'Administrador') {
           Swal.fire({
             icon:'success',
@@ -60,7 +60,7 @@ const Login = ({ callback }) => {
           //vista mesero
           Swal.fire({
             icon: 'success',
-            html: `Bienvenido mesero <strong>${username}</strong>!`,
+            html: `Bienvenido mesero <strong>${usuarioname}</strong>!`,
           });
           goTo('/Mesero');
         }
@@ -81,18 +81,18 @@ const Login = ({ callback }) => {
 
   return (
     <div>
-      <Header Nombre='Restaurente LA SUPERIOR'></Header>
+      <Header Nombre='PURO SABOR MEXICANO'></Header>
     
     <div className='container_principal'>
       
         <div className='login_container'>
-            <h1> Iniciar sesion</h1>
+            <h1> INICIO SESION</h1>
         <div className='form-group'>  
             <input
             type="text" 
-            placeholder='Nombre de usuario'
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder='Nombre de Usuario'
+            value={usuarioname}
+            onChange={(e) => setUsuarioname(e.target.value)}
             />
         
         </div>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../componentes/Header'
+import Header from '../components/Header'
 import './styles/formulario.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const Mesero = ({ userRole }) => {
+const Mesero = ({ usuarioRole }) => {
 
   const navigate = useNavigate();
 
@@ -15,13 +15,13 @@ const Mesero = ({ userRole }) => {
 
   useEffect(() => {
     // Verificar si el usuario tiene permiso para acceder a esta vista
-    if (userRole !== 'Mesero') {
+    if (usuarioRole !== 'Mesero') {
       // Redirigir al usuario a la página de inicio de sesión (ruta index)
       navigate('/');
     }
-  }, [userRole, navigate]);
+  }, [usuarioRole, navigate]);
 
-  if (userRole !== 'Mesero') {
+  if (usuarioRole !== 'Mesero') {
     // Evitar que se renderice el contenido de VistaAdmin si se redirige
     return null;
   }
@@ -51,7 +51,7 @@ const Mesero = ({ userRole }) => {
     }
   
     try {
-      const response = await axios.post('http://localhost:4700/v1/restaurante/createSell', {
+      const response = await axios.post('http://localhost:4700/v1/restaurante/createVenta', {
         nombreProducto,
         Unidad,
       });

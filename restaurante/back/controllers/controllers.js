@@ -1,22 +1,22 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-async function validateUser(req, res) {
-    const username = req.params.username;
+async function validateUsuario(req, res) {
+    const usuarioname = req.params.usuarioname;
     const password = req.header('Authorization').replace('Bearer ', '');
-    const usersFilePath = path.join(__dirname, '../db/users.json');
+    const usuariosFilePath = path.join(__dirname, '../db/Usuarios.json');
   
     try {
-      const dataJsonUsers = await fs.readFile(usersFilePath, 'utf-8');
-      const arrayObjUsers = JSON.parse(dataJsonUsers);
+      const dataJsonUsuarios = await fs.readFile(usuariosFilePath, 'utf-8');
+      const arrayObjUsuarios = JSON.parse(dataJsonUsuarios);
   
-      const user = arrayObjUsers.find(
-        (search) => search.username === username && search.password === password
+      const usuario = arrayObjUsuarios.find(
+        (search) => search.usuarioname === usuarioname && search.password === password
       );
   
-      if (user) {
+      if (usuario) {
         // Si se encuentra el usuario y la contraseña coincide, devuelve una respuesta exitosa
-        res.json(user);
+        res.json(usuario);
       } else {
         // Si no se encuentra el usuario o la contraseña no coincide, devuelve una respuesta de error
         res.status(401).json({ error: 'Autenticación fallida' });
@@ -28,27 +28,27 @@ async function validateUser(req, res) {
     }
   }
 
-async function getAllUsers(req, res){
-    const usersData = await fs.readFile(path.join(__dirname, '../db/users.json'));
-    const jsonUsers = JSON.parse(usersData);
-    res.json(jsonUsers);
+async function getAllUsuarios(req, res){
+    const usuariosData = await fs.readFile(path.join(__dirname, '../db/Usuarios.json'));
+    const jsonUsuarios = JSON.parse(usuariosData);
+    res.json(jsonUsuarios);
 }
 
-async function deleteUser(req, res) {
-    const username = req.params.username;
+async function deleteUsuario(req, res) {
+    const usuarioname = req.params.usuarioname;
   
     try {
-      const usersFilePath = path.join(__dirname, '../db/users.json');
-      let data = await fs.readFile(usersFilePath, 'utf-8');
-      let users = JSON.parse(data);
+      const usuariosFilePath = path.join(__dirname, '../db/Usuarios.json');
+      let data = await fs.readFile(usuariosFilePath, 'utf-8');
+      let usuarios = JSON.parse(data);
   
       // Filtrar y eliminar el usuario por su nombre de usuario
-      users = users.filter((user) => user.username !== username);
+      usuarios = usuarios.filter((usuario) => usuario.usuarioname !== usuarioname);
   
-      console.log('Usuarios después de la eliminación:', users);
+      console.log('Usuarios después de la eliminación:', usuarios);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
+      await fs.writeFile(usuariosFilePath, JSON.stringify(usuarios, null, 2));
   
       console.log('Usuario eliminado con éxito');
   
@@ -60,21 +60,21 @@ async function deleteUser(req, res) {
   }
 
   
-  async function deleteProduct(req, res) {
-    const productName = req.params.productName;
+  async function deleteProducto(req, res) {
+    const productoName = req.params.productoName;
   
     try {
-      const productFilepath = path.join(__dirname, '../db/product.json');
-      let data = await fs.readFile(productFilepath, 'utf-8');
-      let products = JSON.parse(data);
+      const productoFilepath = path.join(__dirname, '../db/Producto.json');
+      let data = await fs.readFile(productoFilepath, 'utf-8');
+      let productos = JSON.parse(data);
   
       // Filtrar y eliminar el usuario por su nombre de usuario
-      products = products.filter((product) => product.productName !== productName);
+      productos = productos.filter((producto) => producto.productoName !== productoName);
   
-      console.log('Productos después de la eliminación:', products);
+      console.log('Productos después de la eliminación:', productos);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(productFilepath, JSON.stringify(products, null, 2));
+      await fs.writeFile(productoFilepath, JSON.stringify(productos, null, 2));
   
       console.log('producto eliminado con éxito');
   
@@ -84,26 +84,26 @@ async function deleteUser(req, res) {
       res.status(500).json({ error: 'Error interno del servidor' });
     }
   }
-  async function createProduct(req, res) {
-    const { productName, price, id,  } = req.body;
+  async function createProducto(req, res) {
+    const { productoName, precio, id,  } = req.body;
   
     try {
-      const productFilepath = path.join(__dirname, '../db/product.json');
-      let data = await fs.readFile(productFilepath, 'utf-8');
-      let products = JSON.parse(data);
+      const productoFilepath = path.join(__dirname, '../db/Producto.json');
+      let data = await fs.readFile(productoFilepath, 'utf-8');
+      let productos = JSON.parse(data);
   
       // Crear un nuevo producto con los datos del cuerpo de la solicitud
-      const newProduct = {
+      const newProducto = {
         id: id,
-        productName: productName,
-        price: price,
+        productoName: productoName,
+        precio: precio,
       };
   
       // Agregar el nuevo producto a la lista de productos
-      products.push(newProduct);
+      productos.push(newProducto);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(productFilepath, JSON.stringify(products, null, 2));
+      await fs.writeFile(productoFilepath, JSON.stringify(productos, null, 2));
   
       res.json({ success: true });
     } catch (error) {
@@ -112,81 +112,81 @@ async function deleteUser(req, res) {
     }
   }
 
-  //CREAR UN GASTO
-  async function createGasto(req, res) {
-    const { gastoName, price, id,  } = req.body;
+  //CREAR UN SALDO
+  async function createSaldo(req, res) {
+    const { saldoName, precio, id,  } = req.body;
   
     try {
-      const gastoFilepath = path.join(__dirname, '../db/gasto.json');
-      let data = await fs.readFile(gastoFilepath, 'utf-8');
-      let gasto = JSON.parse(data);
+      const saldoFilepath = path.join(__dirname, '../db/Saldo.json');
+      let data = await fs.readFile(saldoFilepath, 'utf-8');
+      let saldo = JSON.parse(data);
   
       // Crear un nuevo producto con los datos del cuerpo de la solicitud
-      const newGasto = {
+      const newSaldo = {
         id: id,
-        gastoName: gastoName,
-        price: price,
+        saldoName: saldoName,
+        precio: precio,
       };
   
-      // Agregar a la lista de gastos
-      gasto.push(newGasto);
+      // Agregar a la lista de saldo
+      saldo.push(newSaldo);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(gastoFilepath, JSON.stringify(gasto, null, 2));
+      await fs.writeFile(saldoFilepath, JSON.stringify(saldo, null, 2));
   
       res.json({ success: true });
     } catch (error) {
-      console.error('Error al crear el gasto', error);
+      console.error('Error al crear el saldo', error);
       res.status(500).json({ error: 'Error interno del servidor' });
     }
   }
 
 
-  async function getAllProduct(req, res) {
+  async function getAllProducto(req, res) {
     try {
       // Leer la lista de productos desde un archivo JSON
-      const productFilepath = path.join(__dirname, '../db/product.json');
-      const data = await fs.readFile(productFilepath, 'utf-8');
-      const products = JSON.parse(data);
+      const productoFilepath = path.join(__dirname, '../db/Producto.json');
+      const data = await fs.readFile(productoFilepath, 'utf-8');
+      const productos = JSON.parse(data);
   
-      res.json(products);
+      res.json(productos);
     } catch (error) {
       console.error('Error al obtener la lista de productos', error);
       res.status(500).json({ error: 'Error interno del servidor' });
     }
   }
 
-  async function getAllGasto(req, res) {
+  async function getAllSaldo(req, res) {
     try {
       // Leer la lista de productos desde un archivo JSON
-      const gastoFilepath = path.join(__dirname, '../db/gasto.json');
-      const data = await fs.readFile(gastoFilepath, 'utf-8');
-      const gasto = JSON.parse(data);
+      const saldoFilepath = path.join(__dirname, '../db/Saldo.json');
+      const data = await fs.readFile(saldoFilepath, 'utf-8');
+      const saldo = JSON.parse(data);
   
-      res.json(gasto);
+      res.json(saldo);
     } catch (error) {
-      console.error('Error al obtener la lista de gastos', error);
+      console.error('Error al obtener la lista de saldo', error);
       res.status(500).json({ error: 'Error interno del servidor' });
     }
   }
 
   
-async function getOneUsers(req, res){
-    const username = req.params.username;
+async function getOneUsuarios(req, res){
+    const usuarioname = req.params.usuarioname;
   const password = req.header('Authorization').replace('Bearer ', '');
-  const usersFilePath = path.join(__dirname, '../db/users.json');
+  const usuariosFilePath = path.join(__dirname, '../db/Usuarios.json');
 
   try {
-    const dataJsonUsers = await fs.readFile(usersFilePath, 'utf-8');
-    const arrayObjUsers = JSON.parse(dataJsonUsers);
+    const dataJsonUsuarios = await fs.readFile(usuariosFilePath, 'utf-8');
+    const arrayObjUsuarios = JSON.parse(dataJsonUsuarios);
 
-    const user = arrayObjUsers.find(
-      (search) => search.username === username && search.password === password
+    const usuario = arrayObjUsuarios.find(
+      (search) => search.usuarioname === usuarioname && search.password === password
     );
 
-    if (user) {
+    if (usuario) {
         // Si se encuentra el usuario y la contraseña coincide, devuelve una respuesta exitosa
-        res.json(user);
+        res.json(usuario);
       } else {
         // Si no se encuentra el usuario o la contraseña no coincide, devuelve una respuesta de error
         res.status(401).json({ error: 'Autenticación fallida' });
@@ -200,41 +200,41 @@ async function getOneUsers(req, res){
 
 
 }
-async function getAllSells(req, res) {
+async function getAllVentas(req, res) {
     try {
       // Leer la lista de ventas desde un archivo JSON
-      const sellFilepath = path.join(__dirname, '../db/sells.json');
-      const data = await fs.readFile(sellFilepath, 'utf-8');
-      const sells = JSON.parse(data);
+      const ventaFilepath = path.join(__dirname, '../db/Ventas.json');
+      const data = await fs.readFile(ventaFilepath, 'utf-8');
+      const ventas = JSON.parse(data);
   
-      res.json(sells);
+      res.json(ventas);
     } catch (error) {
       console.error('Error al obtener la lista de ventas', error);
       res.status(500).json({ error: 'Error interno del servidor' });
     }
   }
-  async function createUser(req, res) {
-    const { username, password, id, age, role } = req.body;
+  async function createUsuario(req, res) {
+    const { usuarioname, password, id, Edad, role } = req.body;
   
     try {
-      const usersFilePath = path.join(__dirname, '../db/users.json');
-      let data = await fs.readFile(usersFilePath, 'utf-8');
-      let users = JSON.parse(data);
+      const usuariosFilePath = path.join(__dirname, '../db/Usuarios.json');
+      let data = await fs.readFile(usuariosFilePath, 'utf-8');
+      let usuarios = JSON.parse(data);
   
       // Crear un nuevo usuario con los datos del cuerpo de la solicitud
-      const newUser = {
+      const newUsuario = {
         id: id,
-        username: username,
+        usuarioname: usuarioname,
         password: password,
-        age: age,
+        Edad: Edad,
         role: role,
       };
   
       // Agregar el nuevo usuario a la lista de usuarios
-      users.push(newUser);
+      usuarios.push(newUsuario);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
+      await fs.writeFile(usuariosFilePath, JSON.stringify(usuarios, null, 2));
   
       res.json({ success: true });
     } catch (error) {
@@ -243,25 +243,25 @@ async function getAllSells(req, res) {
     }
   }
 
-async function createSell(req, res) {
+async function createVenta(req, res) {
     const { nombreProducto, Unidad,  } = req.body;
   
     try {
-      const sellFilepath = path.join(__dirname, '../db/sells.json');
-      let data = await fs.readFile(sellFilepath, 'utf-8');
-      let sells = JSON.parse(data);
+      const ventaFilepath = path.join(__dirname, '../db/Ventas.json');
+      let data = await fs.readFile(ventaFilepath, 'utf-8');
+      let ventas = JSON.parse(data);
   
       // Crear una nueva venta con los datos del cuerpo de la solicitud
-      const newSell = {
+      const newVenta = {
         nombreProducto: nombreProducto,
         Unidad: Unidad,
       };
   
       // Agregar el nuevo venta a la lista de ventas
-      sells.push(newSell);
+      ventas.push(newVenta);
   
       // Guardar los datos actualizados en el archivo JSON
-      await fs.writeFile(sellFilepath, JSON.stringify(sells, null, 2));
+      await fs.writeFile(ventaFilepath, JSON.stringify(ventas, null, 2));
   
       res.json({ success: true });
     } catch (error) {
@@ -271,17 +271,17 @@ async function createSell(req, res) {
   }
 
 module.exports = { 
-    validateUser,
-    deleteUser,
-    deleteProduct,
-    getAllProduct,
-    createProduct,
-    getAllUsers, 
-    getOneUsers,
-    createSell,
-    getAllSells,
-    createUser,
-    createGasto,
-    getAllGasto,
+    validateUsuario,
+    deleteUsuario,
+    deleteProducto,
+    getAllProducto,
+    createProducto,
+    getAllUsuarios, 
+    getOneUsuarios,
+    createVenta,
+    getAllVentas,
+    createUsuario,
+    createSaldo,
+    getAllSaldo,
 
 }
