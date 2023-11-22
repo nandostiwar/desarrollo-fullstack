@@ -1,0 +1,30 @@
+[
+  {
+    "id": "12133456",
+    "username": "Pipe",
+    "age": "37",
+    "password": "pipe123",
+    "role": "Administrador"
+  },
+  {
+    "id": "12133454",
+    "username": "Lipe",
+    "age": "37",
+    "password": "pipe123",
+    "role": "Mesero"
+  },
+  {
+    "id": "466615",
+    "username": "ANAquiski",
+    "password": "2525",
+    "age": "25",
+    "role": "Administrador"
+  },
+  {
+    "id": "155515",
+    "username": "felo",
+    "password": "2525",
+    "age": "15",
+    "role": "Administrador"
+  }
+]
