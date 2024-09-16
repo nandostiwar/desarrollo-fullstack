@@ -1,0 +1,35 @@
+.container_principal {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 3%;
+    background-color: rgba(122, 120, 120, 0.933);
+  }
+  
+  .login-container {
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 2%;
+      padding: 50px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px #ccc;
+      text-align: center;
+    }
+    
+  
+    .form-group {
+      margin: 10px 0;
+    }
+    
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "productoName": "Tacos",
+    "precio": "8.500"
+  },
+  {
+    "id": "2",
+    "productoName": "Tlayuda",
+    "precio": "15.600"
+  },
+  {
+    "id": "3",
+    "productoName": "Totopos",
+    "precio": "20.000"
+  },
+  {
+    "id": "4",
+    "productoName": "Mole",
+    "precio": "25.000"
+  }
+]
